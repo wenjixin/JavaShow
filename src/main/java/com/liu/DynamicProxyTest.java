@@ -15,6 +15,7 @@ public class DynamicProxyTest implements Serializable {
 	public static void main(String[] args) {
 		UserSomething something = new UserSomethingImpl();
 		PerformanceHandler handler = new PerformanceHandler(something);
+		// java动态代理基于接口
 		UserSomething proxyUserSomething = (UserSomething) Proxy.newProxyInstance(
 		        something.getClass().getClassLoader(), something.getClass()
 		                .getInterfaces(),
@@ -22,6 +23,7 @@ public class DynamicProxyTest implements Serializable {
 		proxyUserSomething.doTask1();
 		proxyUserSomething.doTask2();
 
+		// cglib基于类的继承，生成子类。类中的private和final方法不能进行处理
 		CglibProxy cglibProxy = new CglibProxy();
 		UserSomethingImpl impl = (UserSomethingImpl) cglibProxy.getProxy(UserSomethingImpl.class);
 		impl.doTask1();
