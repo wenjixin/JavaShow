@@ -7,7 +7,8 @@ package com.liu;
  */
 public class CpuCache {
 	public static void main(String[] args) {
-		loopCounts();
+//		loopCounts();
+		System.out.println(null+"%");
 	}
 
 	/**
