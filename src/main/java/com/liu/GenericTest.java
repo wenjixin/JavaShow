@@ -37,11 +37,11 @@ public class GenericTest {
 		Integer a=new Integer(0);
 		stack.push(a);
 		Iterable<Integer> iterable =new Iterable<Integer>() {
-			
-			@Override
+
 			public Iterator<Integer> iterator() {
-				return null;
-			}
+	            return null;
+            }
+			
 		};
 		stack.pushAll(iterable);
 	}
