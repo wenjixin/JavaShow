@@ -36,7 +36,7 @@ public class ClassGeneric {
 
 	public static void main(String[] args) {
 		ClassGeneric classGeneric = new ClassGeneric();
-		HashMap hashMap = new HashMap();
+		// HashMap hashMap = new HashMap();
 		HashMap<Integer, Integer> hashMap2 = new HashMap<Integer, Integer>();
 		classGeneric.putFavorite(HashMap.class, hashMap2);
 		// HashMap<Integer,Integer>.class is a syntax error
